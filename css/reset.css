@@ -1,0 +1,13 @@
+/* Reset tất cả thành phần */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+/* Khai báo biến */
+:root{
+    --container-width: 1170px;
+    --column-padding: 15px
+}
