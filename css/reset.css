@@ -1,13 +1,19 @@
-/* Reset tất cả thành phần */
+/*Reset tất cả thành phần HTML*/
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    line-height: 1.5;
+    line-height: 1.6;
+    outline: none;
 }
 
-/* Khai báo biến */
+/*Khai báo biến*/
 :root{
     --container-width: 1170px;
-    --column-padding: 15px
+    --column-padding: 15px;
+    --primary-color: #253993; /*Màu chủ đạo*/
+    --text-color: #808080; /*Màu chữ*/
+    --heading-color: #121212; /*Màu các thẻ heading (h1, h2, h3)*/
+    --link-color: #000; /*Màu liên kết*/
+    --primary-color-opacity: #253993b8;
 }

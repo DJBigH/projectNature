@@ -18,3 +18,7 @@ HƯỚNG DẪN THỰC HÀNH LÀM PROJECT - CSS
 + index.html: File chạy chính của dự án (Trang chủ)
 + category.html: File trang danh mục sản phẩm
 + blog.html: File trang blog
+
+- Chuẩn bị công cụ cần thiết
++ Pick màu: tìm màu
++ What font: Tìm tên phông
