@@ -127,7 +127,7 @@ html {
 }
 
 body {
-  font-family: "Roboto Regular", sans-serif;
+  font-family: "PlayfairDisplay Medium", sans-serif;
   font-size: 1rem;
   color: var(--text-color);
 }
@@ -196,21 +196,29 @@ img {
   color: #ffff;
 }
 
-/* Style default section */
-.section-box{
-    padding: 40px 0px;
+/* Style default btn-large */
+.btn--large {
+  padding: 12px 38px;
+  font-size: 1.1rem;
+  border: none;
 }
 
-.section-title{
+/* Style default section */
+.section-box {
+  padding: 40px 0px;
+}
+
+.section-title {
   color: #121212;
   font-family: "Playfair Display", sans-serif;
   font-size: 3.2rem;
   font-weight: 700;
   /* line-height: 3.53rem; */
   padding-top: 20px;
+  text-align: center;
 }
 
-.section-subtitle{
+.section-subtitle {
   color: #121212;
   font-weight: 300;
   font-family: sans-serif;
