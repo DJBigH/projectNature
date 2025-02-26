@@ -22,3 +22,6 @@ HƯỚNG DẪN THỰC HÀNH LÀM PROJECT - CSS
 - Chuẩn bị công cụ cần thiết
 + Pick màu: tìm màu
 + What font: Tìm tên phông
+
+- Thư viện tạo slide ảnh (Carousel)
++ OWL carousel

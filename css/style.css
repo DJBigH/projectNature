@@ -64,7 +64,7 @@
 }
 
 .header__inner {
-  padding: 20px 0px;
+  margin: 30px 0px;
 }
 
 .header__inner .primary-menu {
@@ -80,8 +80,17 @@
   padding: 10px 0;
 }
 
-.header__inner .primary-menu > ul > li.has-children::after{
-  content: 'a';
+.header__inner .primary-menu > ul > li.has-children::after {
+  content: " \f0d8";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  top: 72%;
+  left: 0;
+  right: 0;
+  position: absolute;
+  text-align: center;
+  color: var(--primary-color);
+  display: none;
 }
 
 .header__inner .primary-menu a {
@@ -98,25 +107,29 @@
   content: "/";
 }
 
-.header__inner .primary-menu>ul>li:first-child::before{
-  content: '';
+.header__inner .primary-menu > ul > li:first-child::before {
+  content: "";
 }
 
-.header__inner .primary-menu>ul>li:first-child>a{
+.header__inner .primary-menu > ul > li:first-child > a {
   padding-left: 0;
 }
 
-.header__inner .primary-menu>ul>li:last-child>a{
+.header__inner .primary-menu > ul > li:last-child > a {
   padding-right: 0;
 }
 
-.header__inner .primary-menu > ul > li > a:hover{
+.header__inner .primary-menu > ul > li:hover > a {
   color: var(--primary-color);
-
 }
 
-.header__inner .primary-menu>ul>li ul{
+.header__inner .primary-menu > ul > li.has-children:hover > ul,
+.header__inner .primary-menu > ul > li.has-children:hover::after {
   display: block;
+}
+
+.header__inner .primary-menu > ul > li ul {
+  display: none;
   position: absolute;
   background: #fff;
   top: 100%;
@@ -124,16 +137,239 @@
   box-shadow: #00000026 0px 3px 7px 0px;
   border-top: 2px solid #253993;
   padding: 20px;
-
 }
 
-.header__inner .primary-menu>ul>li ul li a{
-    display: block;
-    color: var(--text-color);
-    padding: 5px 10px;
+.header__inner .primary-menu > ul > li ul li a {
+  display: block;
+  color: var(--text-color);
+  padding: 6px 10px;
+  font-family: "Roboto";
+  font-weight: 300;
+  line-height: 22px;
 }
 
-.header__inner .primary-menu>ul>li ul a:hover{
+.header__inner .primary-menu > ul > li ul a:hover {
   background: var(--primary-color);
   color: #fff;
+}
+
+.header__inner .header__inner--cart {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  cursor: pointer;
+  position: relative;
+}
+
+.header__inner .header__inner--cart::before {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 48px;
+  background: url("../images/sprite_bg.png") no-repeat;
+  background-position: -5px 0;
+  display: block;
+  margin-right: 10px;
+}
+
+.header__inner .header__inner--cart span {
+  display: block;
+  cursor: pointer;
+}
+
+.header__inner .header__inner--cart span:first-child {
+  font-family: "Roboto Bold", sans-serif;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+
+.header__inner .header__inner--cart .cart-content {
+  display: block;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #fff;
+  min-width: 300px;
+  padding: 0 20px;
+  box-shadow: #00000026 0px 3px 7px 0px;
+  cursor: initial;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s linear;
+  z-index: 1000000;
+  transform-origin: max-height, border-top, padding-top, padding-bottom;
+}
+
+.header__inner .header__inner--cart #toggle-cart {
+  display: none;
+}
+
+.header__inner .header__inner--cart #toggle-cart:checked ~ .cart-content {
+  max-height: 500px;
+  border-top: 2px solid #253993;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.header__inner
+  .header__inner--cart
+  .cart-content
+  .cart-content--item__wrap
+  .cart-content--item {
+  margin-bottom: 18px;
+}
+
+.header__inner
+  .header__inner--cart
+  .cart-content
+  .cart-content--item__wrap
+  .cart-content--item
+  .row {
+  margin: 0px;
+}
+
+.header__inner
+  .header__inner--cart
+  .cart-content
+  .cart-content--item__wrap
+  .cart-content--item
+  .row
+  > div {
+  padding: 0 10px;
+}
+.header__inner
+  .header__inner--cart
+  .cart-content
+  .cart-content--item__wrap
+  .cart-content--item
+  .col-item {
+  border: 1px solid #efefef;
+}
+.header__inner
+  .header__inner--cart
+  .cart-content
+  .cart-content--item__wrap
+  .cart-content--item
+  img {
+  width: 100%;
+}
+
+.header__inner
+  .header__inner--cart
+  .cart-content
+  .cart-content--item__wrap
+  .cart-content--item
+  .remove {
+  color: red;
+  font-weight: bold;
+  line-height: 20px;
+  padding: 4px;
+}
+
+.header__inner
+  .header__inner--cart
+  .cart-content
+  .cart-content--item__wrap
+  .cart-content--item
+  .col-price {
+  color: #333;
+  display: table-cell;
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  line-height: 20px;
+  padding: 4px;
+}
+
+.header__inner .header__inner--cart .cart-content .cart-content--item__wrap {
+  border-bottom: 1px solid #ddd;
+}
+
+.header__inner
+  .header__inner--cart
+  .cart-content
+  .cart-content--totals
+  .total__items {
+  display: flex;
+}
+
+.header__inner
+  .header__inner--cart
+  .cart-content
+  .cart-content--totals
+  .total__items
+  .total__items--value,
+.header__inner
+  .header__inner--cart
+  .cart-content
+  .cart-content--totals
+  .total__items
+  .total__items--name {
+  flex-grow: 1;
+  display: flex;
+  justify-content: flex-end;
+  flex-basis: 50%;
+  padding-top: 4px;
+}
+
+.header__inner
+  .header__inner--cart
+  .cart-content
+  .cart-content--totals
+  .total__items
+  .total__items--name {
+  font-weight: bold;
+  line-height: 20px;
+  color: #333;
+}
+
+.header__inner
+  .header__inner--cart
+  .cart-content
+  .cart-content--totals
+  .total__items
+  .total__items--value {
+  line-height: 20px;
+  color: #333;
+}
+
+.header__inner .header__inner--cart .cart-content .cart-content--action {
+  text-align: right;
+  margin: 20px 0px 5px;
+}
+
+.header__inner .header__inner--cart .cart-content .cart-content--action a {
+  color: #fff;
+}
+
+.header__inner .header__inner--cart .cart-content .cart-content--action .btn {
+  padding: 6px 15px;
+  background: var(--primary-color);
+  color: #ffff;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.header__inner
+  .header__inner--cart
+  .cart-content
+  .cart-content--action
+  .btn:hover {
+  background: #23282a;
+}
+
+/* Header - End */
+
+/* Main__Slide */
+.main__slide {
+  margin-top: 17px;
+}
+
+/* Service Box */
+.service-box .section-title,
+.service-box .section-subtitle {
+  text-align: center;
 }
