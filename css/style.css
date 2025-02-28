@@ -710,7 +710,7 @@
   display: block;
   float: left;
   width: 46px;
-  background: url(/images/cms-icon.png) no-repeat;
+  background: url(images/cms-icon.png) no-repeat;
   margin-right: 25px;
   transition: all 0.2s linear;
 }
@@ -865,7 +865,7 @@
 /* Footer Network - Begin */
 
 .footer .footer-network{
-  background: url(/images/news-Bg.jpeg) no-repeat;
+  background: url(images/news-Bg.jpeg) no-repeat;
   background-size: cover;
   color: #fff;
   padding: 100px 0;
@@ -934,7 +934,7 @@
 }
 
 .footer .footer__inner{
-  background: url(/images/footer-bg.jpeg) no-repeat;
+  background: url(images/footer-bg.jpeg) no-repeat;
   background-size: cover;
   background-position: center;
 }
