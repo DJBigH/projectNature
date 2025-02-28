@@ -710,7 +710,7 @@
   display: block;
   float: left;
   width: 46px;
-  background: url(/images/cms-icon.png) no-repeat;
+  background: url(images/cms-icon.png) no-repeat;
   margin-right: 25px;
   transition: all 0.2s linear;
 }
